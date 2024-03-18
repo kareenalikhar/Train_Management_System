@@ -1,0 +1,49 @@
+﻿@model Train_Management_System.Models.TrainMaster
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<img src="~/images/train.png" style="width:1300px;height:500px" />
+
+<h1>Edit</h1>
+
+<h4>TrainMaster</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Train_ID" class="control-label"></label>
+                <input asp-for="Train_ID" class="form-control" />
+                <span asp-validation-for="Train_ID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Train_Name" class="control-label"></label>
+                <input asp-for="Train_Name" class="form-control" />
+                <span asp-validation-for="Train_Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Train_Capacity" class="control-label"></label>
+                <input asp-for="Train_Capacity" class="form-control" />
+                <span asp-validation-for="Train_Capacity" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Train_Status" class="control-label"></label>
+                <input asp-for="Train_Status" class="form-control" />
+                <span asp-validation-for="Train_Status" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

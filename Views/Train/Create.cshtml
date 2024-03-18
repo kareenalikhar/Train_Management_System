@@ -1,0 +1,62 @@
+﻿@model Train_Management_System.Models.TrainMaster
+
+@{
+    ViewData["Title"] = "Create";
+}
+@using (Html.BeginForm("Create", "Train", FormMethod.Post))
+
+{
+    <div class="container-fluid">
+        <img src="~/images/train.png" style="width:1300px;height:500px" />
+    </div>
+    
+
+<h4>TrainMaster</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Train_ID" class="control-label"></label>
+                <input asp-for="Train_ID" class="form-control" />
+                <span asp-validation-for="Train_ID" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Train_Name" class="control-label"></label>
+                <input asp-for="Train_Name" class="form-control" />
+                <span asp-validation-for="Train_Name" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <label asp-for="Train_Capacity" class="control-label"></label>
+                <input asp-for="Train_Capacity" class="form-control" />
+                <span asp-validation-for="Train_Capacity" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+
+    Select Train Status: <br />
+                    <span>Confirm: </span> @Html.RadioButton("Train_Status", "Confirm", false)
+                    <span> | Waiting: </span> @Html.RadioButton("Train_Status", "Waiting", false)
+    
+    <br />
+    <br />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+<br />
+<p> @ViewBag.message </p>
+}
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Train_Management_System.Models.TrainMaster>
+
+@{
+    ViewData["Title"] = "Index";
+}
+<img src="~/images/train.png" style="width:1300px;height:500px"/>
+
+<br /><br />
+<p>
+    <a asp-action="Create"><b>Create</b></a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Train_ID)
+
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Train_Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Train_Capacity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Train_Status)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Train_ID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Train_Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Train_Capacity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Train_Status)
+                </td>
+                <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Train_ID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.Train_ID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Train_ID })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
