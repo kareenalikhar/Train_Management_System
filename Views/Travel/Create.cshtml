@@ -53,7 +53,7 @@
 
             <div class="form-group">
                 <label asp-for="Destination" class="control-label"></label>
-                <select asp-for="Destination" class="form-control" />
+                <select asp-for="Destination" class="form-control" >
                 <option>Select</option>
                 <option>Nagpur</option>
                 <option>Pune</option>
@@ -76,7 +76,15 @@
 
             <div class="form-group">
                 <label asp-for="Class" class="control-label"></label>
-                <input asp-for="Class" class="form-control" />
+                <select asp-for="Class" class="form-control" >
+                    <option>Select</option>
+                <option>General</option>
+                <option>Sleeper</option>
+                <option>Ac 3rd Tier</option>
+                <option>Ac 2nd Tier</option>
+                <option>1st AC</option>
+
+                </select>
                 <span asp-validation-for="Class" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -84,13 +92,14 @@
                 <input asp-for="Cost" class="form-control" />
                 <span asp-validation-for="Cost" class="text-danger"></span>
             </div>
+            <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
-
+<br />
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
