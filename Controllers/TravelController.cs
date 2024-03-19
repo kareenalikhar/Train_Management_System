@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Train_Management_System.Models;
 
 namespace Train_Management_System.Controllers
@@ -28,6 +29,7 @@ namespace Train_Management_System.Controllers
                 {
                     ViewBag.Travel = "Record inserted successfully";
                     ModelState.Clear();
+
                     return RedirectToAction("Index"); // Redirect to Index action after successful insertion
                 }
                 else
@@ -38,6 +40,10 @@ namespace Train_Management_System.Controllers
 
             return View(iList); // Return the view with the model if ModelState is not valid or insertion fails
         }
+        
+
+        
+
 
         [HttpGet]
         public ActionResult Edit(int id)
