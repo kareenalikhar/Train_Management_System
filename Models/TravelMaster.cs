@@ -10,6 +10,8 @@ namespace Train_Management_System.Models
         public int Train_ID {  get; set; }
         public string Source {  get; set; }
         public string Destination { get; set; }
+
+        public string Class {  get; set; }
         public int Cost {  get; set; }
 
     }

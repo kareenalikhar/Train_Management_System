@@ -23,7 +23,7 @@ namespace Train_Management_System.Models
         {
             connection(); // Assuming this method sets up the connection
 
-            string query = "INSERT INTO TravelMaster VALUES(@TravelID, @TravelDate, @TrainID, @Source, @Destination, @Cost)";
+            string query = "INSERT INTO TravelMaster VALUES(@TravelID, @TravelDate, @TrainID, @Source, @Destination,@Class, @Cost)";
             SqlCommand cmd = new SqlCommand(query, con);
 
             // Add parameters to the SqlCommand
@@ -32,6 +32,7 @@ namespace Train_Management_System.Models
             cmd.Parameters.AddWithValue("@TrainID", iList.Train_ID);
             cmd.Parameters.AddWithValue("@Source", iList.Source);
             cmd.Parameters.AddWithValue("@Destination", iList.Destination);
+            cmd.Parameters.AddWithValue("@Class",iList.Class);
             cmd.Parameters.AddWithValue("@Cost", iList.Cost);
 
             con.Open();
@@ -60,6 +61,7 @@ namespace Train_Management_System.Models
                     Train_ID = Convert.ToInt32(dr["Train_ID"]),
                     Source = Convert.ToString(dr["Source"]),
                     Destination = Convert.ToString(dr["Destination"]),
+                    Class = Convert.ToString(dr["Class"]),
                     Cost = Convert.ToInt32(dr["Cost"])
                 });
 
@@ -78,7 +80,7 @@ namespace Train_Management_System.Models
         {
             connection(); // Assuming this method sets up the connection
 
-            string query = "UPDATE TravelMaster SET Travel_Date = @TravelDate, Train_ID = @TrainID, Source = @Source, Destination = @Destination, Cost = @Cost WHERE Travel_ID = @TravelID";
+            string query = "UPDATE TravelMaster SET Travel_Date = @TravelDate, Train_ID = @TrainID, Source = @Source, Destination = @Destination,Class=@Class, Cost = @Cost WHERE Travel_ID = @TravelID";
             SqlCommand cmd = new SqlCommand(query, con);
 
             // Add parameters to the SqlCommand
@@ -86,6 +88,7 @@ namespace Train_Management_System.Models
             cmd.Parameters.AddWithValue("@TrainID", iList.Train_ID);
             cmd.Parameters.AddWithValue("@Source", iList.Source);
             cmd.Parameters.AddWithValue("@Destination", iList.Destination);
+            cmd.Parameters.AddWithValue("@Class",iList.Class);
             cmd.Parameters.AddWithValue("@Cost", iList.Cost);
             cmd.Parameters.AddWithValue("@TravelID", iList.Travel_ID);
 
