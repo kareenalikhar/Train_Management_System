@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h5>Create</h5>
 
 <h4>TravelMaster</h4>
 <hr />
@@ -107,4 +107,30 @@
 <p>@ViewBag.Travel</p>
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+
+    <script>
+        $(document).ready(function () {
+            $('#Source, #Destination, #Class').change(function () {
+                var source = $('#Source').val();
+                var destination = $('#Destination').val();
+                var travelClass = $('#Class').val();
+
+                if (source && destination && travelClass) {
+                    $.ajax({
+                        type: 'POST',
+                        url: '@Url.Action("GetCost", "Travel")',
+                        data: { source: source, destination: destination, travelClass: travelClass },
+                        success: function (result) {
+                            $('#Cost').val(result.cost);
+                        },
+                        error: function (xhr, status, error) {
+                            console.log(error);
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 }
+

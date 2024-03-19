@@ -126,6 +126,24 @@ namespace Train_Management_System.Models
                 return false; // Return false to indicate deletion failure
             }
         }
+        public decimal GetCost(string source, string destination, string travelClass)
+        {
+            connection(); // Assuming this method sets up the connection
+
+            string query = "SELECT Cost FROM Cost WHERE Source = @Source AND Destination = @Destination AND Class = @Class";
+            SqlCommand cmd = new SqlCommand(query, con);
+
+            // Add parameters to the SqlCommand
+            cmd.Parameters.AddWithValue("@Source", source);
+            cmd.Parameters.AddWithValue("@Destination", destination);
+            cmd.Parameters.AddWithValue("@Class", travelClass);
+
+            con.Open();
+            decimal cost = Convert.ToDecimal(cmd.ExecuteScalar());
+            con.Close();
+
+            return cost;
+        }
 
 
     }

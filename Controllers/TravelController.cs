@@ -102,6 +102,16 @@ namespace Train_Management_System.Controllers
                 return View(); // You might want to return to a specific view for error handling
             }
         }
+        [HttpPost]
+        public JsonResult GetCost(string source, string destination, string travelClass)
+        {
+            // Assume TravelDBHandler has a method to fetch the cost based on the source, destination, and class
+            TravelDBHandler ihandler = new TravelDBHandler();
+            decimal cost = ihandler.GetCost(source, destination, travelClass);
+
+            return Json(new { cost = cost });
+        }
+
 
 
 
