@@ -1,7 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using Train_Management_System.Models;
-using System.Data;
 using System.Data.SqlClient;
 
 namespace Train_Management_System.Controllers
@@ -79,21 +78,20 @@ namespace Train_Management_System.Controllers
                 if (ItemHandler.DeleteItem(id))
                 {
                     ViewBag.AlertMsg = "Item Deleted Successfully";
+                    return RedirectToAction("Index");
                 }
                 else
                 {
                     ViewBag.AlertMsg = "Error deleting item"; // Set an error message if deletion fails
                 }
-                return RedirectToAction("Index");
+                
             }
             catch (Exception ex)
             {
                 ViewBag.AlertMsg = "An error occurred: " + ex.Message; // Display a generic error message
-                return View(); // You might want to return to a specific view for error handling
+                // You might want to return to a specific view for error handling
             }
+            return View();
         }
-
-
-
     }
 }
