@@ -81,19 +81,32 @@ namespace Train_Management_System.Models
                 return false;
         }
 
-        public bool DeleteItem(int TrainID)
+        public bool DeleteItem(int id)
         {
-            connection();
-            string query = "delete from TrainMaster where TrainID = " + TrainID;
-            SqlCommand cmd = new SqlCommand(query, con);
-            con.Open();
-            int i = cmd.ExecuteNonQuery();
-            con.Close();
-            if (i >= 1)
-                return true;
-            else
+            try
+            {
+                
+                    con.Open();
+                    string query = "DELETE FROM TrainMaster WHERE Train_ID = @TrainID";
+                    SqlCommand cmd = new SqlCommand(query, con);
+                    cmd.Parameters.AddWithValue("@TrainID", id);
+
+                    int rowsAffected = cmd.ExecuteNonQuery();
+
+                    return rowsAffected > 0;
+                
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception or log it
+                Console.WriteLine("Error in DeleteItem method: " + ex.Message);
                 return false;
+            }
         }
+
+
+
+
     }
 }
 

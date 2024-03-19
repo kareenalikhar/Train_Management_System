@@ -71,19 +71,29 @@ namespace Train_Management_System.Controllers
             return View(itemhandler.GetItemList().Find(TrainMaster => TrainMaster.Train_ID == id));
         }
 
-        public ActionResult Delete(int id)
+        public IActionResult Delete(int id)
         {
             try
             {
-                TrainDBHandler itemhandler = new TrainDBHandler();
-                if (itemhandler.DeleteItem(id))
+                TrainDBHandler ItemHandler = new TrainDBHandler();
+                if (ItemHandler.DeleteItem(id))
                 {
-                    ViewBag.Alertmsg = "Item Deleted successfully";
-
+                    ViewBag.AlertMsg = "Item Deleted Successfully";
+                }
+                else
+                {
+                    ViewBag.AlertMsg = "Error deleting item"; // Set an error message if deletion fails
                 }
                 return RedirectToAction("Index");
             }
-            catch { return View(); }
+            catch (Exception ex)
+            {
+                ViewBag.AlertMsg = "An error occurred: " + ex.Message; // Display a generic error message
+                return View(); // You might want to return to a specific view for error handling
+            }
         }
+
+
+
     }
 }
