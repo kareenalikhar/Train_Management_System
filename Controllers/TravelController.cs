@@ -41,17 +41,12 @@ namespace Train_Management_System.Controllers
             return View(iList); // Return the view with the model if ModelState is not valid or insertion fails
         }
         
-
-        
-
-
         [HttpGet]
         public ActionResult Edit(int id)
         {
             TravelDBHandler ItemHandler = new TravelDBHandler();
             return View(ItemHandler.GetItemList().Find(itemmodel => itemmodel.Travel_ID == id));
         }
-
 
         [HttpPost]
         public ActionResult Edit(int id, TravelMaster iList)
@@ -111,8 +106,6 @@ namespace Train_Management_System.Controllers
 
             return Json(new { cost = cost });
         }
-
-
 
 
     }
