@@ -17,9 +17,22 @@ Destination varchar(500),
 Class varchar(500),
 Cost int);
 
-insert into cost values('Nagpur','Pune','General',245),
-('Nagpur','Pune','Sleeper',300),
-('Nagpur','Pune','Ac 3rd Tier',765),
-('Nagpur','Pune','Ac 2nd Tier',1080),
-('Nagpur','Pune','1st AC',1200)
+insert into cost values('Nagpur Junction','Wardha Junction','General',70),
+('Nagpur Junction','Wardha Junction','Sleeper',145),
+('Nagpur Junction','Wardha Junction','Ac 3rd Tier',400),
+('Nagpur Junction','Wardha Junction','Ac 2nd Tier',650),
+('Nagpur Junction','Wardha Junction','1st AC',1000)
 
+insert into cost values('Nagpur Junction','Badnera Junction','General',90),
+('Nagpur Junction','Badnera Junction','Sleeper',175),
+('Nagpur Junction','Badnera Junction','Ac 3rd Tier',555),
+('Nagpur Junction','Badnera Junction','Ac 2nd Tier',760),
+('Nagpur Junction','Badnera Junction','1st AC',1255)
+
+insert into cost values('Nagpur Junction','Akola Junction','General',120),
+('Nagpur Junction','Akola Junction','Sleeper',245),
+('Nagpur Junction','Akola Junction','Ac 3rd Tier',600),
+('Nagpur Junction','Akola Junction','Ac 2nd Tier',820),
+('Nagpur Junction','Akola Junction','1st AC',1350)
+
+select * from Cost
