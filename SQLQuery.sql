@@ -120,5 +120,124 @@ insert into Cost values('Nagpur Junction','Ahmednagar Junction','General',235),
   ('Nagpur Junction','Vasco da Gama','Ac 2nd Tier',2575),
   ('Nagpur Junction','Vasco da Gama','1st Ac',3245)
 
+  ________________________________________________________________________________
+
+  insert into Cost values('Wardha Junction','Nagpur Junction','General',70),
+  ('Wardha Junction','Nagpur Junction','Sleeper',145),
+  ('Wardha Junction','Nagpur Junction','Ac 3rd Tier',400),
+  ('Wardha Junction','Nagpur Junction','Ac 2nd Tier',650),
+  ('Wardha Junction','Nagpur Junction','1st Ac',1000)
+
+  
+insert into cost values('Wardha Junction','Badnera Junction','General',120),
+('Wardha Junction','Badnera Junction','Sleeper',175),
+('Wardha Junction','Badnera Junction','Ac 3rd Tier',555),
+('Wardha Junction','Badnera Junction','Ac 2nd Tier',760),
+('Wardha Junction','Badnera Junction','1st AC',1255)
+
+
+insert into cost values('Wardha Junction','Akola Junction','General',155),
+('Wardha Junction','Akola Junction','Sleeper',215),
+('Wardha Junction','Akola Junction','Ac 3rd Tier',555),
+('Wardha Junction','Akola Junction','Ac 2nd Tier',760),
+('Wardha Junction','Akola Junction','1st AC',1255)
+
+
+insert into cost values('Wardha Junction','Malkapur','General',175),
+('Wardha Junction','Malkapur','Sleeper',220),
+('Wardha Junction','Malkapur','Ac 3rd Tier',555),
+('Wardha Junction','Malkapur','Ac 2nd Tier',760),
+('Wardha Junction','Malkapur','1st AC',1255)
+
+
+insert into cost values('Wardha Junction','Busaval Junction','General',175),
+('Wardha Junction','Busaval Junction','Sleeper',275),
+('Wardha Junction','Busaval Junction','Ac 3rd Tier',720),
+('Wardha Junction','Busaval Junction','Ac 2nd Tier',995),
+('Wardha Junction','Busaval Junction','1st AC',1665)
+
+
+insert into cost values('Wardha Junction','Manmad Junction','General',255),
+('Wardha Junction','Manmad Junction','Sleeper',365),
+('Wardha Junction','Manmad Junction','Ac 3rd Tier',955),
+('Wardha Junction','Manmad Junction','Ac 2nd Tier',1340),
+('Wardha Junction','Manmad Junction','1st AC',2230)
+
+
+insert into cost values('Wardha Junction','Ahmednagar Junction','General',335),
+('Wardha Junction','Ahmednagar Junction','Sleeper',475),
+('Wardha Junction','Ahmednagar Junction','Ac 3rd Tier',1245),
+('Wardha Junction','Ahmednagar Junction','Ac 2nd Tier',1760),
+('Wardha Junction','Ahmednagar Junction','1st AC',2960)
+
+insert into cost values('Wardha Junction','Daund Junction','General',325),
+('Wardha Junction','Daund Junction','Sleeper',425),
+('Wardha Junction','Daund Junction','Ac 3rd Tier',1120),
+('Wardha Junction','Daund Junction','Ac 2nd Tier',1580),
+('Wardha Junction','Daund Junction','1st AC',2960)
+
+insert into cost values('Wardha Junction','Pune Junction','General',325),
+('Wardha Junction','Pune Junction','Sleeper',425),
+('Wardha Junction','Pune Junction','Ac 3rd Tier',1145),
+('Wardha Junction','Pune Junction','Ac 2nd Tier',1635),
+('Wardha Junction','Pune Junction','1st AC',2960)
+
+insert into cost values('Wardha Junction','Kolhapur Junction','General',325),
+('Wardha Junction','Kolhapur Junction','Sleeper',455),
+('Wardha Junction','Kolhapur Junction','Ac 3rd Tier',1145),
+('Wardha Junction','Kolhapur Junction','Ac 2nd Tier',1655),
+('Wardha Junction','Kolhapur Junction','1st AC',2975)
+
+insert into cost values('Wardha Junction','CSMT','General',430),
+('Wardha Junction','CSMT','Sleeper',455),
+('Wardha Junction','CSMT','Ac 3rd Tier',1200),
+('Wardha Junction','CSMT','Ac 2nd Tier',1695),
+('Wardha Junction','CSMT','1st AC',2850)
+
+insert into cost values('Wardha Junction','Thane','General',375),
+('Wardha Junction','Thane','Sleeper',450),
+('Wardha Junction','Thane','Ac 3rd Tier',1050),
+('Wardha Junction','Thane','Ac 2nd Tier',1670),
+('Wardha Junction','Thane','1st AC',2850)
+
+insert into cost values('Wardha Junction','Dadar','General',375),
+('Wardha Junction','Dadar','Sleeper',430),
+('Wardha Junction','Dadar','Ac 3rd Tier',1045),
+('Wardha Junction','Dadar','Ac 2nd Tier',1130),
+('Wardha Junction','Dadar','1st AC',1595)
+
+insert into cost values('Wardha Junction','Nasik Road','General',375),
+('Wardha Junction','Nasik Road','Sleeper',365),
+('Wardha Junction','Nasik Road','Ac 3rd Tier',1025),
+('Wardha Junction','Nasik Road','Ac 2nd Tier',1445),
+('Wardha Junction','Nasik Road','1st AC',1340)
+
+insert into cost values('Wardha Junction','Jalgaon','General',215),
+('Wardha Junction','Jalgaon','Sleeper',255),
+('Wardha Junction','Jalgaon','Ac 3rd Tier',600),
+('Wardha Junction','Jalgaon','Ac 2nd Tier',845),
+('Wardha Junction','Jalgaon','1st AC',1120)
+
+insert into cost values('Wardha Junction','Jalgaon','General',215),
+('Wardha Junction','Jalgaon','Sleeper',255),
+('Wardha Junction','Jalgaon','Ac 3rd Tier',600),
+('Wardha Junction','Jalgaon','Ac 2nd Tier',845),
+('Wardha Junction','Jalgaon','1st AC',1120)
+
+insert into cost values('Wardha Junction','Madgaon','General',215),
+('Wardha Junction','Madgaon','Sleeper',780),
+('Wardha Junction','Madgaon','Ac 3rd Tier',1985),
+('Wardha Junction','Madgaon','Ac 2nd Tier',2760),
+('Wardha Junction','Madgaon','1st AC',3110)
+
+insert into cost values('Wardha Junction','Vasco da Gama','General',215),
+('Wardha Junction','Vasco da Gama','Sleeper',780),
+('Wardha Junction','Vasco da Gama','Ac 3rd Tier',1920),
+('Wardha Junction','Vasco da Gama','Ac 2nd Tier',2760),
+('Wardha Junction','Vasco da Gama','1st AC',3110)
+_________________________________________________________________________________________________
+
+
+
 
 select * from Cost
