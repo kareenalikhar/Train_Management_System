@@ -237,7 +237,14 @@ insert into cost values('Wardha Junction','Vasco da Gama','General',215),
 ('Wardha Junction','Vasco da Gama','1st AC',3110)
 _________________________________________________________________________________________________
 
+create table Registration(Name varchar(500), Email varchar(500), PhoneNo bigint,
+Password varchar(500), ConfirmPassword  varchar(500))
 
+insert into cost values('Wardha Junction','Madgaon','General',215),
+('Wardha Junction','Madgaon','Sleeper',175),
+('Wardha Junction','Madgaon','Ac 3rd Tier',1985),
+('Wardha Junction','Madgaon','Ac 2nd Tier',2760),
+('Wardha Junction','Madgaon','1st AC',3110)
 
 
 select * from Cost
