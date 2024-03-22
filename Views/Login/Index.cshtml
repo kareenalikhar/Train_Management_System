@@ -5,7 +5,7 @@
 @{
     ViewBag.Title = "Index";
 }
-<h2>Registration Form</h2>
+<h2 style="text-align:center">Registration Form</h2>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
@@ -48,10 +48,11 @@
                 @Html.ValidationMessageFor(model => model.ConfirmPassword, "", new { @class = "text-danger" })
             </div>
         </div>
-
+        <br />
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                <input type="submit1" value="Save" class="btn btn-primary" /> &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; <input type="submit2" value="Back" class="btn btn-primary" />
+
             </div>
         </div>
     </div>
