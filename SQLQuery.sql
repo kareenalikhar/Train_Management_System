@@ -240,11 +240,35 @@ ________________________________________________________________________________
 create table Registration(Name varchar(500), Email varchar(500), PhoneNo bigint,
 Password varchar(500), ConfirmPassword  varchar(500))
 
-insert into cost values('Wardha Junction','Madgaon','General',215),
-('Wardha Junction','Madgaon','Sleeper',175),
-('Wardha Junction','Madgaon','Ac 3rd Tier',1985),
-('Wardha Junction','Madgaon','Ac 2nd Tier',2760),
-('Wardha Junction','Madgaon','1st AC',3110)
+insert into cost values('Badnera Junction','Nagpur Junction','General',85),
+('Badnera Junction','Nagpur Junction','Sleeper',175),
+('Badnera Junction','Nagpur Junction','Ac 3rd Tier',555),
+('Badnera Junction','Nagpur Junction','Ac 2nd Tier',760),
+('Badnera Junction','Nagpur Junction','1st AC',1255)
+
+insert into cost values('Badnera Junction','Wardha Junction','General',85),
+('Badnera Junction','Wardha Junction','Sleeper',175),
+('Badnera Junction','Wardha Junction','Ac 3rd Tier',555),
+('Badnera Junction','Wardha Junction','Ac 2nd Tier',760),
+('Badnera Junction','Wardha Junction','1st AC',1255)
+
+insert into cost values('Badnera Junction','Akola Junction','General',85),
+('Badnera Junction','Akola Junction','Sleeper',175),
+('Badnera Junction','Akola Junction','Ac 3rd Tier',555),
+('Badnera Junction','Akola Junction','Ac 2nd Tier',760),
+('Badnera Junction','Akola Junction','1st AC',1255)
+
+insert into cost values('Badnera Junction','Malkapur','General',85),
+('Badnera Junction','Malkapur','Sleeper',175),
+('Badnera Junction','Malkapur','Ac 3rd Tier',555),
+('Badnera Junction','Malkapur','Ac 2nd Tier',760),
+('Badnera Junction','Malkapur','1st AC',1255)
+
+insert into cost values('Badnera Junction','Busaval Junction','General',105),
+('Badnera Junction','Busaval Junction','Sleeper',200),
+('Badnera Junction','Busaval Junction','Ac 3rd Tier',555),
+('Badnera Junction','Busaval Junction','Ac 2nd Tier',760),
+('Badnera Junction','Busaval Junction','1st AC',1255)
 
 
 select * from Cost
