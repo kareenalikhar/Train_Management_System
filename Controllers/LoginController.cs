@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Data.SqlClient;
+using Train_Management_System.Constants;
 
 namespace Train_Management_System.Controllers
 {
@@ -9,8 +10,7 @@ namespace Train_Management_System.Controllers
 
         private void connection()
         {
-            string strcon = "server=HP\\SQLEXPRESS;database=Trainmanagement;integrated security=true;";
-            con = new SqlConnection(strcon);
+            con = new SqlConnection(ApplicatiuonConstants.ConnectionString);
         }
         public IActionResult Index()
         {

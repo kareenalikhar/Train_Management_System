@@ -7,18 +7,19 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
 using Microsoft.AspNetCore.Mvc;
+/*using Microsoft.VisualStudio.Web.CodeGenerators.Mvc.Templates.Blazor;
+*/using Train_Management_System.Models;
+using Train_Management_System.Constants;
 
-
-namespace Train_Management_System.Models
+namespace Train_Management_System.Repository
 {
-    public class TrainDBHandler
+    public class TrainRepository
     {
         System.Data.SqlClient.
          SqlConnection con;
         private void connection()
         {
-            string constring = "server=.\\sqlexpress;database=Trainmanagement;integrated security=true";
-            con = new SqlConnection(constring);
+            con = new SqlConnection(ApplicatiuonConstants.ConnectionString);
         }
 
         //insert method 

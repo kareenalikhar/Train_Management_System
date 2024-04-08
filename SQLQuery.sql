@@ -2,7 +2,7 @@ create table TrainMaster(Train_ID int primary key,
 Train_Name varchar(500),
 Train_Capacity int not null,
 Train_Status varchar(500))
-
+SELECT * FROM TrainMaster
 
 Create table TravelMaster(Travel_ID int primary key,
 Travel_Date datetime,
@@ -221,7 +221,7 @@ insert into cost values('Wardha Junction','Jalgaon','General',215),
 insert into cost values('Wardha Junction','Jalgaon','General',215),
 ('Wardha Junction','Jalgaon','Sleeper',255),
 ('Wardha Junction','Jalgaon','Ac 3rd Tier',600),
-('Wardha Junction','Jalgaon','Ac 2nd Tier',845),
+('Wardha Junction','Jalgaon','Ac 2nd Tier',845),	
 ('Wardha Junction','Jalgaon','1st AC',1120)
 
 insert into cost values('Wardha Junction','Madgaon','General',215),

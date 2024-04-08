@@ -1,6 +1,9 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Data;
 using Train_Management_System.Models;
+using Train_Management_System.Dto;
+using Train_Management_System.Services;
+using Train_Management_System.Services.ServiceImpl;
 using System.Data.SqlClient;
 
 namespace Train_Management_System.Controllers
@@ -17,7 +20,7 @@ namespace Train_Management_System.Controllers
 
        public IActionResult Index()
         {
-            TrainDBHandler handler = new TrainDBHandler();  
+            TravelDBHandler handler = new TravelDBHandler();  
             return View(handler.GetItemList());
         }
 
@@ -28,17 +31,10 @@ namespace Train_Management_System.Controllers
         }
 
         [HttpPost]
-        public ActionResult Create(TrainMaster iList)
+        public ActionResult Create(TrainMasterRequestDto iList)
         {
-            if (ModelState.IsValid)
-            {
-                TrainDBHandler ihandler = new TrainDBHandler();
-                if (ihandler.insertItem(iList))
-                {
-                    ViewBag.message = "record inserted successfully";
-                    ModelState.Clear();
-                }
-            }
+            TrainServiceInterface trainServiceInterface = new TrainServiceImpl();
+            trainServiceInterface.AddTrain(iList);
 
             return View();
 
@@ -47,26 +43,27 @@ namespace Train_Management_System.Controllers
         [HttpGet]
         public ActionResult Edit(int id)
         {
-            TrainDBHandler ItemHandler = new TrainDBHandler();
+            TravelDBHandler ItemHandler = new TravelDBHandler();
             return View(ItemHandler.GetItemList().Find(TrainMaster => TrainMaster.Train_ID == id));
         }
 
         [HttpPost]
         public ActionResult Edit(int id, TrainMaster iList)
         {
-            try
-            {
-                TrainDBHandler ItemHandler = new TrainDBHandler();
-                ItemHandler.UpdateItem(iList);
-                return RedirectToAction("Index");
-            }
-            catch { return View(); }
+            /* try
+             {
+                 TravelDBHandler ItemHandler = new TravelDBHandler();
+                 ItemHandler.UpdateItem(iList);
+                 return RedirectToAction("Index");
+             }
+             catch { return View(); }*/
+            return View();
         }
 
 
         public IActionResult Details(int id)
         {
-            TrainDBHandler itemhandler = new TrainDBHandler();
+            TravelDBHandler itemhandler = new TravelDBHandler();
             return View(itemhandler.GetItemList().Find(TrainMaster => TrainMaster.Train_ID == id));
         }
 
@@ -74,7 +71,7 @@ namespace Train_Management_System.Controllers
         {
             try
             {
-                TrainDBHandler ItemHandler = new TrainDBHandler();
+                TravelDBHandler ItemHandler = new TravelDBHandler();
                 if (ItemHandler.DeleteItem(id))
                 {
                     ViewBag.AlertMsg = "Item Deleted Successfully";

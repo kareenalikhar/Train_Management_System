@@ -18,7 +18,7 @@ namespace Train_Management_System.Models
             try
             {
                 connection();
-                string query = "INSERT INTO TrainMaster VALUES(" + reg.Name + ",'" + reg.Email + "'," + reg.Contact + ",'" + reg.Password + "','" + reg.ConfirmPassword + "')";
+                string query = "INSERT +INTO TrainMaster VALUES(" + reg.Name + ",'" + reg.Email + "'," + reg.Contact + ",'" + reg.Password + "','" + reg.ConfirmPassword + "')";
                 SqlCommand cmd = new SqlCommand(query, con);
                 con.Open();
                 cmd.ExecuteNonQuery();
